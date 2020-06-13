@@ -1,0 +1,35 @@
+<html>
+  <head>
+  <title><%=title%></title>
+   <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="row">
+    <div class="col4"></div>
+    <div class="col4">
+    <form method="POST" action="/login">
+      <fieldset>
+       <legend> <h2>LOGIN</h2></legend>
+       <% if(success == false) {%>
+        <p align="center"><font color="red">Incorrect username or password</font></p> <br>
+      <%} %>
+        <img src="images/user.png" style="width:40">
+        <input type="text" placeholder="Enter Username" name="username" required> <br>
+        <br> <img src="images/password.png" style="width:40">
+        <input type="password" placeholder="Enter Password" name="password" required> <br>
+        <span class="invalid"><br></span>
+        <br>
+        <input style="border: none;width: 80px;height: 30px;" type="submit" name="login" value="Log In">
+      </fieldset>
+
+      <br> <a href="/signup"><img src="images/signup1.jpg" style="width:100px;"></a>
+    </form>
+      
+
+    </div>
+    <div class="col4"></div>
+    </div>
+  </body>
+
+</html>
+

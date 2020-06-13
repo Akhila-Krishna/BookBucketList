@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title><%=title%></title>
+  <link rel='stylesheet' href='/css/style.css' />
+  <link rel='stylesheet' href='/css/bootstrap.css' />
+</head>
+
+<body>
+<a class="top-right" href="/logout"><input style="width: 80px; height: 50px;" type="button" value="Log Out"></a>
+<div class="container">
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10 goodtogo">
+<h2><%=user.fname%> <%=user.lname%>'s</h2>
+ <form method="post">
+        <h2>Bucket List</h2>
+        <img src="/images/book1.jpeg" style="width: 60px">
+        <input type="text" placeholder="Enter Bookname here" name="book" required>
+        <img src="/images/author.png" style="width: 50px">
+        <input type="text" placeholder="Enter Authorname here" name="author" required>
+        <input style="border: none;width: 80px;height: 30px;" type="submit" formaction="/user/add" name="add" value="Add">
+        <input style="border: none;width: 80px;height: 30px;" type="submit" formaction="/user/remove" name="remove" value="Remove">
+    </form>
+
+<table style="width: 100%">
+<tr><th>Book Name</th><th>Author</th>
+</tr>
+
+<% for(var i=0;i<book.length;i++) {%>
+  <tr><td><%= book[i].bookname %></td><td><%= book[i].authorname %></td></tr>
+<%} %>
+
+
+
+</table>
+</div>
+<div class="col-md-1"></div>
+</div>
+</div>
+</body>
+</html>
+

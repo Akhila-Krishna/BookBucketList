@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title><%=title%></title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="row">
+    <div class="col4" style="width: 38%;"></div>
+    <div class="col4" style="width: 25%;">
+    <form style="text-align: left" class="form1" method="post" action="/register">
+      <fieldset>
+        <legend><h2>Setup Your Account</h2></legend>
+        <% if(success == false) {%>
+                <p align="center"><font color="red">Passwords do not match</font></p> 
+          <%} %>
+        Name <br> <input style="border: 2px solid;" type="text" placeholder="First" name="firstname" value="" required><tr>
+        <br>
+        <input type="text" style="border: 2px solid;" placeholder="Last" name="lastname" value="" required>
+        <span class="invalid"></span><br>
+        Username<br> <input type="text" style="border: 2px solid;"  placeholder="Username" name="username" value="" required>
+        <span class="invalid"></span><br>
+        Password<br>
+        <input type="password" style="border: 2px solid;" name="password" value="" required><br>
+        Confirm Password<br>
+        <input type="password" style="border: 2px solid;" name="confirm" value="" required>
+        <span class="invalid"></span><br><br>
+        <input style="border: none;width: 80px;height: 30px;margin-left: 100px;" type="submit" name="signup" value="Sign Up">
+      </fieldset>
+    </form>
+    </div>
+    <div class="col4"></div>
+    </div>
+  </body>
+
+</html>
+
